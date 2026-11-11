@@ -1,0 +1,16 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title= title || "CIKIRE"
+  body
+    h1.encabezado#tituloPrincipal CIKIRE — Gestión de Turnos
+    
+    if usuarioLogueado
+      nav.navbar
+        a(href="/vista/turnos") Turnos
+        a(href="/vista/pacientes") Pacientes
+        a(href="/vista/profesionales") Profesionales
+        a(href="/login/logout") Salir
+    
+    block content
